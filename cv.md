@@ -19,7 +19,7 @@ I'm a 24y.o. Front end developer from Uzbekistan with more than 1.5 years experi
 #### I want to learn
 
 - Creating real time apps
-- Desing patterns
+- Design patterns
 - React.js
 - Typescript
 - Data Structures and Algorithms
@@ -28,7 +28,7 @@ I'm a 24y.o. Front end developer from Uzbekistan with more than 1.5 years experi
 
 - [exams.uz](https://exams.uz/) - Corporate website for the Edu-Action IELTS test center.
 - [smartinvest.uz](https://smartinvest.uz/) - A catalog website for a textile company.
-- [rosuniversitet.com](https://rosuniversitet.com/) (Dashboard for admins) - Consulting.
+- [rosuniversitet.com](https://rosuniversitet.com/) (Dashboard for admins) - Consulting company.
 
 #### Contacts
 
