@@ -42,6 +42,7 @@ input::-webkit-file-upload-button {
   display: flex;
   align-items: stretch;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
 }
 .container {
@@ -55,7 +56,6 @@ input::-webkit-file-upload-button {
 // HEADER start
 .header {
   border-bottom: 1px solid $border;
-
   &-user {
     @include flex(center, center);
     height: 48px;
@@ -107,6 +107,11 @@ input::-webkit-file-upload-button {
       }
     }
   }
+  & .sidebar {
+    @include responsive(767, 1) {
+      display: none;
+    }
+  }
 }
 // HEADER end
 
@@ -115,8 +120,19 @@ input::-webkit-file-upload-button {
   &-user {
     width: 100%;
     margin-top: -30px;
+    &__head {
+      @include responsive(767, 1) {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
     &__img {
       position: relative;
+      @include responsive(767, 1) {
+        width: 70px;
+        height: 70px;
+      }
       img {
         border-radius: 100%;
         overflow: hidden;
@@ -141,6 +157,9 @@ input::-webkit-file-upload-button {
       }
     }
     &__links {
+      @include responsive(767, 1) {
+        display: none;
+      }
       ul li {
         display: flex;
         align-items: center;
@@ -166,10 +185,13 @@ input::-webkit-file-upload-button {
         }
       }
     }
+    @include responsive(767, 1) {
+      margin: 30px 0 0 0;
+    }
   }
   &-content {
     padding: 24px;
-    margin: 24px 0;
+    margin: 40px 0;
     border-radius: 8px;
     border: 1px solid $border;
     h2 {
@@ -200,6 +222,9 @@ input::-webkit-file-upload-button {
   }
   &-status {
     position: relative;
+    @include responsive(767, 1) {
+      display: none;
+    }
     .user-status {
       position: absolute;
       left: 85%;
@@ -221,8 +246,38 @@ input::-webkit-file-upload-button {
       }
     }
   }
+  & .sidebar {
+    @include responsive(767, 1) {
+      flex-direction: column;
+    }
+  }
+  & .header {
+    @include responsive(768, 2) {
+      display: none;
+    }
+  }
 }
 // MAIN end
+
+// FOOTER start
+.footer {
+  &-wrap {
+    border-top: 1px solid $border;
+    padding: 20px 0;
+    @include flex(center, space-between);
+  }
+  &-logo {
+    @include flex(center, space-between);
+    gap: 10px;
+    svg {
+      fill: #fff;
+    }
+    img {
+      width: 83px;
+    }
+  }
+}
+// FOOTER end
 
 // SIDEBAR start
 .sidebar {
@@ -230,10 +285,17 @@ input::-webkit-file-upload-button {
   &__left {
     min-width: 296px;
     width: 20%;
+    @include responsive(767, 1) {
+      width: 100%;
+    }
   }
   &__right {
     width: 80%;
     padding: 0 16px;
+    @include responsive(767, 1) {
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 // SIDEBAR end
