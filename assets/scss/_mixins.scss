@@ -1,0 +1,17 @@
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin responsive($w, $type) {
+  @if $type == 1 {
+    @media screen and (max-width: #{$w + px}) {
+      @content;
+    }
+  } @else if $type == 2 {
+    @media screen and (min-width: #{$w + px}) {
+      @content;
+    }
+  }
+}
